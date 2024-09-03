@@ -1,16 +1,17 @@
 import axios from 'axios';
 
-export const getbrands = async () =>
-  await axios.get('http://localhost:8000/api/brands');
+const API_BASE_URL = 'http://54.37.70.104:8000/api';
+
+export const getbrands = async () => await axios.get(`${API_BASE_URL}/brands`);
 
 export const getbrand = async (slug) =>
-  await axios.get(`http://localhost:8000/api/brand/${slug}`);
+  await axios.get(`${API_BASE_URL}/brand/${slug}`);
 
 export const removebrand = async (slug) =>
-  await axios.delete(`http://localhost:8000/api/brand/${slug}`, {});
+  await axios.delete(`${API_BASE_URL}/brand/${slug}`, {});
 
 export const updatebrand = async (slug, brand) =>
-  await axios.put(`http://localhost:8000/api/brand/${slug}`, { brand });
+  await axios.put(`${API_BASE_URL}/brand/${slug}`, { brand });
 
 export const createbrand = async (brand) =>
-  await axios.post(`http://localhost:8000/api/brand`, { brand });
+  await axios.post(`${API_BASE_URL}/brand`, { brand });

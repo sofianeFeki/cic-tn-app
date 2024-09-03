@@ -145,7 +145,7 @@ const Banner = () => {
       try {
         const response = await getSliderImages();
         const formattedImages = response.data.map((image) => {
-          const imageUrl = `http://localhost:8000${image.image.replace(
+          const imageUrl = `http://54.37.70.104:8000${image.image.replace(
             /\\/g,
             '/'
           )}`;

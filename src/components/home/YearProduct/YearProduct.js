@@ -46,7 +46,7 @@ const YearProduct = () => {
         try {
           const response = await getProductByTitle(selectedProduct);
           const product = response.data;
-          const baseURL = 'https://cic-server-ygl9.onrender.com';
+          const baseURL = 'http://54.37.70.104:8000';
 
           const formatUrl = (path) => `${baseURL}${path.replace(/\\/g, '/')}`;
 

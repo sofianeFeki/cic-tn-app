@@ -37,7 +37,7 @@ const Offer = () => {
           />
           <link
             rel="canonical"
-            href={`https://www.chemicalink.com/category/${category}`}
+            href={`https://www.cic-tn.com/category/${category}`}
           />
           <meta
             property="og:title"

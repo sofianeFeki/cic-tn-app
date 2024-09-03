@@ -47,7 +47,7 @@ const Shop = () => {
     try {
       const res = await getProducts(page, sort, itemsPerPage, filters);
       const productData = res.data.products;
-      const baseUrl = 'https://cic-server-ygl9.onrender.com';
+      const baseUrl = 'http://54.37.70.104:8000';
 
       const formatUrl = (path) => `${baseUrl}${path.replace(/\\/g, '/')}`;
 
@@ -101,7 +101,7 @@ const Shop = () => {
           name="keywords"
           content="Chemical Ink company, cic-tn, imprimante tunisie,imprimante prix tunisie, photocopieur tunisie, consommables informatiques"
         />
-        <link rel="canonical" href="https://www.chemicalink.com/shop" />
+        <link rel="canonical" href="https://www.cic-tn.com/shop" />
         <meta property="og:title" content="Chemical Ink Company | Shop" />
         <meta
           property="og:description"

@@ -114,7 +114,7 @@ const HeaderBottom = () => {
       const res = await searchProducts(searchQuery);
       const productData = res.data.products;
 
-      const baseUrl = 'http://localhost:8000';
+      const baseUrl = 'http://54.37.70.104:8000';
       const formatUrl = (path) => `${baseUrl}${path.replace(/\\/g, '/')}`;
 
       productData.forEach((product) => {
