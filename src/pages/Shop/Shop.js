@@ -47,7 +47,7 @@ const Shop = () => {
     try {
       const res = await getProducts(page, sort, itemsPerPage, filters);
       const productData = res.data.products;
-      const baseUrl = 'http://54.37.70.104:8000';
+      const baseUrl = 'https://54.37.70.104:8000';
 
       const formatUrl = (path) => `${baseUrl}${path.replace(/\\/g, '/')}`;
 
