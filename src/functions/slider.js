@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://54.37.70.104:8000/api';
+const API_BASE_URL = 'https://cic-server-ygl9.onrender.com/api';
 
 export const createSliderImage = async (formData) => {
   const config = {
