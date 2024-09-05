@@ -47,7 +47,7 @@ const Shop = () => {
     try {
       const res = await getProducts(page, sort, itemsPerPage, filters);
       const productData = res.data.products;
-      const baseUrl = 'https://cic-server-ygl9.onrender.com';
+      const baseUrl = 'https://api.cic-tn.store';
 
       const formatUrl = (path) => `${baseUrl}${path.replace(/\\/g, '/')}`;
 

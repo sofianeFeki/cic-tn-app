@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://cic-server-ygl9.onrender.com/api';
+const API_BASE_URL = 'https://api.cic-tn.store/api';
 
 export const getbrands = async () => await axios.get(`${API_BASE_URL}/brands`);
 

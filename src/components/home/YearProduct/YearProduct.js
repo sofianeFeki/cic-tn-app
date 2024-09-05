@@ -46,7 +46,7 @@ const YearProduct = () => {
         try {
           const response = await getProductByTitle(selectedProduct);
           const product = response.data;
-          const baseURL = 'http://54.37.70.104:8000';
+          const baseURL = 'https://api.cic-tn.store';
 
           const formatUrl = (path) => `${baseURL}${path.replace(/\\/g, '/')}`;
 

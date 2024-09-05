@@ -59,7 +59,7 @@ const CategoryPage = () => {
       );
       const productData = res.data.products;
 
-      const baseUrl = 'http://54.37.70.104:8000';
+      const baseUrl = 'https://api.cic-tn.store';
       const formatUrl = (path) => `${baseUrl}${path.replace(/\\/g, '/')}`;
 
       const formattedProducts = await Promise.all(

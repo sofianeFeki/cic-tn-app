@@ -30,7 +30,7 @@ const ProductUpdate = () => {
   const gettheProduct = () => {
     getProduct(slug).then((res) => {
       const productData = res.data;
-      const baseUrl = 'https://cic-server-ygl9.onrender.com';
+      const baseUrl = 'https://api.cic-tn.store';
 
       const formatUrl = (path) => `${baseUrl}${path.replace(/\\/g, '/')}`;
 

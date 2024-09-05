@@ -33,7 +33,7 @@ const ProductUpdate = () => {
       getProduct(slug).then((res) => {
         setProduct(res.data);
         if (res.data.Image) {
-          const imageUrl = `https://cic-server-ygl9.onrender.com${res.data.Image.replace(
+          const imageUrl = `https://api.cic-tn.store${res.data.Image.replace(
             /\\/g,
             '/'
           )}`;
