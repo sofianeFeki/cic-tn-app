@@ -37,102 +37,160 @@ const About = () => {
       <div className="pb-10 flex flex-col lg:flex-row">
         {/* Text Section */}
         <div className="lg:w-2/3 lg:pr-8">
-          <h1 className="max-w-[720px] text-base text-lightText mb-2">
-            <span className="text-primeColor font-semibold text-lg">
+          <div className="max-w-[720px] text-base text-lightText  mb-2">
+            <h1 className="text-primeColor font-semibold text-lg mb-1">
               À propos de "Chemical Ink Company of Bureautic" (CIC)
-            </span>{' '}
-            Bienvenue chez Chemical Ink Company of Bureautic (CIC), votre
-            fournisseur de confiance en Tunisie spécialisé dans la distribution
-            de produits destinés aux détaillants spécialisés ainsi qu'aux
-            revendeurs B2B et B2C. Notre catalogue inclut une gamme complète
-            d'accessoires d'imprimantes et de fournitures informatiques de haute
-            qualité. Fondée en 1997, par Monsieur Amor Draoui, notre société
-            s'est donnée pour mission de fournir des produits d'exception à des
-            prix compétitifs, tout en offrant un service client incomparable.
-          </h1>
-          <h1 className="max-w-[720px] text-base text-lightText mb-2">
-            <span className="text-primeColor font-semibold text-lg">
+            </h1>{' '}
+            <p>
+              Bienvenue chez Chemical Ink Company of Bureautic (CIC), votre
+              fournisseur de confiance en Tunisie spécialisé dans la
+              distribution de produits destinés aux détaillants spécialisés
+              ainsi qu'aux revendeurs B2B et B2C. Notre catalogue inclut une
+              gamme complète d'accessoires d'imprimantes et de fournitures
+              informatiques de haute qualité. Fondée en 1997, par Monsieur Amor
+              Draoui, notre société s'est donnée pour mission de fournir des
+              produits d'exception à des prix compétitifs, tout en offrant un
+              service client incomparable.
+            </p>
+          </div>
+          <div className="max-w-[720px] text-base text-lightText mb-2">
+            <h1 className="text-primeColor font-semibold text-lg  mb-1">
               Notre Histoire
-            </span>{' '}
-            Depuis notre création en 1997, Chemical Ink Company of Bureautic a
-            su bâtir une réputation solide grâce à la fidélité de nos clients et
-            à notre engagement indéfectible envers l'excellence. Implantée en
-            Tunisie, notre société est rapidement devenue un acteur majeur dans
-            le secteur des technologies de l'information.
-          </h1>
-          <h1 className="max-w-[720px] text-base text-lightText mb-2">
-            <span className="text-primeColor font-semibold text-lg">
+            </h1>{' '}
+            <p>
+              Depuis notre création en 1997, Chemical Ink Company of Bureautic a
+              su bâtir une réputation solide grâce à la fidélité de nos clients
+              et à notre engagement indéfectible envers l'excellence. Implantée
+              en Tunisie, notre société est rapidement devenue un acteur majeur
+              dans le secteur des technologies de l'information.
+            </p>
+          </div>
+          <div className="max-w-[720px] text-base text-lightText mb-2">
+            <h1 className="text-primeColor font-semibold text-lg mb-1">
               Portefeuille de marques
-            </span>{' '}
+            </h1>
             Au fil des années, Chemical Ink Company of Bureautic (CIC) a forgé
             des partenariats solides avec des leaders mondiaux dans le domaine
             des technologies d'impression et des fournitures informatiques. Nous
-            sommes le distributeur officiel de la marque "Ricoh", un partenariat
-            qui témoigne de notre engagement envers la qualité et l'innovation.
-            Nous avons élargi notre portefeuille en devenant le distributeur
-            officiel de la marque "Pantum", renforçant ainsi notre offre avec
-            des solutions d'impression performantes et économiques. Plus
-            récemment, nous avons ajouté "Tally Dascom" à notre gamme de marques
-            distribuées, offrant à nos clients des solutions d'impression
-            robustes et fiables. De plus, en tant que partenaire PLATINIUM de la
-            marque HP, nous continuons à offrir des produits de pointe à nos
-            clients. Nous avons également eu l'honneur de représenter la marque
-            "Samsung", consolidant ainsi notre position en tant que distributeur
-            de confiance dans le secteur.
-          </h1>
-          <h1 className="max-w-[720px] text-base text-lightText mb-2">
-            <span className="text-primeColor font-semibold text-lg">
+            sommes le distributeur officiel de la marque{' '}
+            <span className="text-blue-500 cursor-pointer font-bold">
+              <a href="https://www.ricoh.com" target="_blank">
+                RICOH
+              </a>
+            </span>
+            , un partenariat qui témoigne de notre engagement envers la qualité
+            et l'innovation. Nous avons élargi notre portefeuille en devenant le
+            distributeur officiel de la marque{' '}
+            <span className="text-blue-500 cursor-pointer font-bold">
+              <a href="https://www.pantum.com" target="_blank">
+                PANTUM
+              </a>
+            </span>
+            , renforçant ainsi notre offre avec des solutions d'impression
+            performantes et économiques. Plus récemment, nous avons ajouté{' '}
+            <span className="text-blue-500 cursor-pointer font-bold">
+              <a href="https://www.dascom.com" target="_blank">
+                TALLY DASCOM
+              </a>
+            </span>{' '}
+            à notre gamme de marques distribuées, offrant à nos clients des
+            solutions d'impression robustes et fiables. De plus, en tant que
+            partenaire PLATINIUM de la marque{' '}
+            <span className="text-blue-500 cursor-pointer font-bold">
+              <a href="https://www.hp.com" target="_blank">
+                HP
+              </a>
+            </span>
+            , nous continuons à offrir des produits de pointe à nos clients.
+            Nous avons également eu l'honneur de représenter la marque{' '}
+            <span className="text-blue-500 cursor-pointer font-bold">
+              <a href="https://www.samsung.com" target="_blank">
+                SAMSUNG
+              </a>
+            </span>
+            , consolidant ainsi notre position en tant que distributeur de
+            confiance dans le secteur.
+          </div>
+
+          <div className="max-w-[720px] text-base text-lightText mb-2">
+            <h1 className="text-primeColor font-semibold text-lg mb-1">
               Nos Valeurs
-            </span>{' '}
-            Qualité Incomparable : Chaque produit est soigneusement sélectionné
-            pour garantir une qualité supérieure et une durabilité optimale,
-            afin de répondre aux exigences les plus élevées de nos clients.
-            Service Client Dévoué : La satisfaction de nos clients est au cœur
-            de notre mission. Notre équipe, toujours à l'écoute, est disponible
-            pour vous offrir un support personnalisé et répondre à tous vos
-            besoins. Innovation Constante : Nous nous engageons à rester à
-            l'avant-garde de l'innovation, en vous proposant les dernières
-            tendances et technologies du marché, pour que vous puissiez toujours
-            bénéficier des meilleures solutions disponibles.
-          </h1>
-          <h1 className="max-w-[720px] text-base text-lightText mb-2">
-            <span className="text-primeColor font-semibold text-lg">
+            </h1>{' '}
+            <p>
+              <span className="font-bold">Qualité Incomparable:</span> Chaque
+              produit est soigneusement sélectionné pour garantir une qualité
+              supérieure et une durabilité optimale, afin de répondre aux
+              exigences les plus élevées de nos clients.{' '}
+            </p>
+            <p>
+              <span className="font-bold">Service Client Dévoué :</span>
+              La satisfaction de nos clients est au cœur de notre mission. Notre
+              équipe, toujours à l'écoute, est disponible pour vous offrir un
+              support personnalisé et répondre à tous vos besoins.
+            </p>
+            <p>
+              {' '}
+              <span className="font-bold"> Innovation Constante :</span> Nous
+              nous engageons à rester à l'avant-garde de l'innovation, en vous
+              proposant les dernières tendances et technologies du marché, pour
+              que vous puissiez toujours bénéficier des meilleures solutions
+              disponibles.
+            </p>
+          </div>
+          <div className="max-w-[720px] text-base text-lightText mb-2">
+            <h1 className="text-primeColor font-semibold text-lg mb-1">
               Pourquoi Choisir Chemical Ink Company of Bureautic (CIC) ?
-            </span>{' '}
-            Vaste Gamme de Produits : Explorez notre large sélection, comprenant
-            des cartouches d'encre, des toners, une variété d'imprimantes, ainsi
-            que des ordinateurs et PC portables. Notre catalogue répond à tous
-            vos besoins en matière de technologie et de bureautique. Livraison
-            Efficace : Avec une logistique optimisée et une forte présence en
-            Tunisie, nous garantissons des délais de livraison rapides, où que
-            vous soyez. Satisfaction Garantie : Votre satisfaction est notre
-            priorité absolue. Tous nos produits sont couverts par une garantie
-            de satisfaction, vous offrant ainsi la tranquillité d'esprit et la
-            confiance que vous méritez.
-          </h1>
-          <h1 className="max-w-[720px] text-base text-lightText mb-2">
-            <span className="text-primeColor font-semibold text-lg">
+            </h1>{' '}
+            <p>
+              {' '}
+              <span className="font-bold">Vaste Gamme de Produits :</span>
+              Explorez notre large sélection, comprenant des cartouches d'encre,
+              des toners, une variété d'imprimantes, ainsi que des ordinateurs
+              et PC portables. Notre catalogue répond à tous vos besoins en
+              matière de technologie et de bureautique.
+            </p>{' '}
+            <p>
+              <span className="font-bold">Livraison Efficace :</span> Avec une
+              logistique optimisée et une forte présence en Tunisie, nous
+              garantissons des délais de livraison rapides, où que vous soyez.
+            </p>{' '}
+            <p>
+              {' '}
+              <span className="font-bold">Satisfaction Garantie :</span> Votre
+              satisfaction est notre priorité absolue. Tous nos produits sont
+              couverts par une garantie de satisfaction, vous offrant ainsi la
+              tranquillité d'esprit et la confiance que vous méritez.
+            </p>
+          </div>
+          <div className="max-w-[720px] text-base text-lightText mb-2">
+            <h1 className="text-primeColor font-semibold text-lg mb-1">
               Notre Équipe
-            </span>{' '}
+            </h1>{' '}
             Notre équipe, composée de professionnels passionnés et expérimentés,
             est entièrement dédiée à vous offrir une expérience d'achat
             inégalée. Convaincus que chaque client mérite une attention
             personnalisée, nous nous engageons à dépasser vos attentes à chaque
             étape, en vous fournissant un service exceptionnel et des solutions
             parfaitement adaptées à vos besoins.
-          </h1>
-          <h1 className="max-w-[720px] text-base text-lightText mb-2">
-            <span className="text-primeColor font-semibold text-lg">
+          </div>
+          <div className="max-w-[720px] text-base text-lightText mb-2">
+            <h1 className="text-primeColor font-semibold text-lg mb-1">
               Contactez-Nous
+            </h1>{' '}
+            Notre équipe est à votre disposition. Veuillez nous contacter par
+            e-mail à l'adresse suivante :{' '}
+            <span className="text-blue-500 underline font-bold">
+              <Link to="/contact">contact@cic-tn.com</Link>
             </span>{' '}
-            Pour toute question ou demande d'assistance, notre équipe est à
-            votre disposition. N'hésitez pas à nous contacter par email à
-            contact@cic-tn.com ou par téléphone au +216 71 835 865 / +216 71 834
-            046.
-          </h1>
+            ou par téléphone aux numéros suivants :
+            <span className="font-bold">+216 71 835 865</span> ou{' '}
+            <span span className="font-bold">
+              +216 71 834 046.
+            </span>
+          </div>
           <Link to="/shop">
             <button className="w-52 h-10 bg-primeColor text-white hover:bg-black duration-300">
-              Continue Shopping
+              Nos Produits
             </button>
           </Link>
         </div>
