@@ -634,7 +634,7 @@ const ProductForm = ({
                       <Select
                         id="Brand"
                         name="Brand"
-                        value={product.Brand}
+                        value={product.Brand || ''}
                         onChange={handleChangeProduct}
                         className="block w-[50%] rounded-md border-0 py-1.5 px-2 focus:outline-none focus:ring focus:border-blue-300 transition duration-150 shadow-md"
                       >
@@ -642,7 +642,7 @@ const ProductForm = ({
                           Choose a Brand
                         </option>
                         {brands.map((brand) => (
-                          <option key={brand._id} value={brand}>
+                          <option key={brand._id} value={brand.name}>
                             {brand.name}
                           </option>
                         ))}
@@ -653,17 +653,22 @@ const ProductForm = ({
                       <select
                         id="Category"
                         name="Category"
-                        value={product.Category}
+                        value={product.Category || ''}
                         onChange={handleChangeProduct}
                         autoComplete="Category"
-                        className="block w-[50%] rounded-md border-0 py-1.5 px-2  focus:outline-none focus:ring focus:border-blue-300 transition duration-150 shadow-md"
+                        className="block w-[50%] rounded-md border-0 py-1.5 px-2 focus:outline-none focus:ring focus:border-blue-300 transition duration-150 shadow-md"
                       >
-                        <option value="" disabled selected hidden>
+                        {/* Default option if no Category is selected */}
+                        <option value="" disabled>
                           Choose a Category
                         </option>
-                        {categories.map((Category) => (
-                          <option key={Category._id} value={Category}>
-                            {Category.name}
+
+                        {/* Dynamically render Category options */}
+                        {categories.map((cat) => (
+                          <option key={cat._id} value={cat.name}>
+                            {' '}
+                            {/* Use category name as value */}
+                            {cat.name}
                           </option>
                         ))}
                       </select>
@@ -675,17 +680,20 @@ const ProductForm = ({
                       <select
                         id="subCategory"
                         name="subCategory"
-                        value={product.subCategory}
+                        value={product.subCategory || ''}
                         onChange={handleChangeProduct}
                         autoComplete="subCategory"
                         className="block w-[50%] rounded-md border-0 py-1.5 px-2 focus:outline-none focus:ring focus:border-blue-300 transition duration-150 shadow-md"
                       >
-                        <option value="" disabled selected hidden>
+                        {/* Default option if no subCategory is selected */}
+                        <option value="" disabled>
                           Choose a subCategory
                         </option>
-                        {subs.map((subCategory) => (
-                          <option key={subCategory._id} value={subCategory}>
-                            {subCategory.name}
+
+                        {/* Dynamically render subCategory options */}
+                        {subs.map((sub) => (
+                          <option key={sub._id} value={sub.name}>
+                            {sub.name}
                           </option>
                         ))}
                       </select>
