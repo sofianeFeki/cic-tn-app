@@ -1,5 +1,5 @@
-import React from "react";
-import { FaLongArrowAltLeft } from "react-icons/fa";
+import React from 'react';
+import { FaLongArrowAltLeft } from 'react-icons/fa';
 
 const SamplePrevArrow = (props) => {
   const { onClick } = props;

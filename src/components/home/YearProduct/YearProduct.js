@@ -99,8 +99,8 @@ const YearProduct = () => {
   }
 
   return (
-    <div className="w-full h-auto mb-20 bg-gray-100 z-10 relative font-titleFont shadow-lg overflow-visible group cursor-pointer rounded-lg flex flex-col md:flex-row">
-      <div className="flex absolute top-4 right-4 bg-black text-white p-1.5 md:p-2 rounded-lg z-20">
+    <div className="w-full h-auto mb-20 bg-gray-100  relative font-titleFont shadow-lg overflow-visible group cursor-pointer rounded-lg flex flex-col md:flex-row">
+      <div className="flex absolute top-4 right-4 bg-black text-white p-1.5 md:p-2 rounded-lg ">
         <span className="block font-bold text-sm md:text-base mr-1">
           Offre se termine dans :
         </span>
@@ -120,11 +120,11 @@ const YearProduct = () => {
 
       <div className="relative w-full  md:w-1/2 flex items-center justify-center">
         <Image
-          className=" w-auto h-auto  object-cover"
+          className=" w-auto h-auto max-h-[500px]  object-cover"
           imgSrc={productData ? productData.Image : imageNotFound}
         />
       </div>
-      <div className="relative w-full md:w-1/2 h-auto p-6 md:p-10 flex flex-col items-start gap-6 justify-center z-10">
+      <div className="relative w-full md:w-1/2 h-auto p-6 md:p-10 flex flex-col items-start gap-6 justify-center">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
           Offre Spéciale
         </h1>
