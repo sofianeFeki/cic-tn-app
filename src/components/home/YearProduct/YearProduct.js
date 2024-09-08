@@ -12,6 +12,7 @@ import {
 } from '../../../functions/product';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { eco } from '../../../assets/images';
 
 const YearProduct = () => {
   const [selectedProduct, setSelectedProduct] = useState('');
@@ -100,11 +101,11 @@ const YearProduct = () => {
 
   return (
     <div className="w-full h-auto mb-20 bg-gray-100  relative font-titleFont shadow-lg overflow-visible group cursor-pointer rounded-lg flex flex-col md:flex-row">
-      <div className="flex absolute top-4 right-4 bg-black text-white p-1.5 md:p-2 rounded-lg ">
-        <span className="block font-bold text-sm md:text-base mr-1">
+      <div className="flex absolute  z-10 md:top-4 right-4 bg-black text-white p-1.5 md:p-2 rounded-lg ">
+        <span className="block font-bold text-xs md:text-base mr-1">
           Offre se termine dans :
         </span>
-        <span className="font-bold mr-6 gap-1 md:gap-2 text-sm md:text-base">
+        <span className="font-bold mr-6 gap-1 md:gap-2 text-xs md:text-base">
           {`${timeLeft.days}j ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}
         </span>
         <div
@@ -118,21 +119,31 @@ const YearProduct = () => {
         </div>
       </div>
 
-      <div className="relative w-full  md:w-1/2 flex items-center justify-center">
+      <div className="relative w-full  md:w-1/2 flex items-center justify-center bg-white">
         <Image
-          className=" w-auto h-auto max-h-[500px]  object-cover"
+          className=" w-auto h-auto max-h-[400px]  object-cover"
           imgSrc={productData ? productData.Image : imageNotFound}
         />
       </div>
-      <div className="relative w-full md:w-1/2 h-auto p-6 md:p-10 flex flex-col items-start gap-6 justify-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+      <div className="relative w-full md:w-1/2 h-auto p-6 md:p-10 flex flex-col items-start gap-2 justify-center">
+        <h1 className="flex items-center text-3xl mt-3 md:text-4xl font-bold text-gray-900">
           Offre Spéciale
+          <span className="mb-3">
+            <img src={eco} className="w-10 h-10 object-contain" alt="eco+" />
+          </span>
         </h1>
-        <p className="text-base md:text-lg font-normal text-gray-700 max-w-[600px]">
-          {productData
-            ? productData.Description
-            : 'Select a product to view its details.'}
-        </p>
+
+        <div>
+          <h2 className="text-md md:text-xl mb-2 font-bold text-gray-900">
+            {productData && productData.Title}
+          </h2>
+          <p className="text-base md:text-lg mb-2 font-normal text-gray-700 max-w-[600px]">
+            {productData
+              ? productData.Description
+              : 'Select a product to view its details.'}
+          </p>
+        </div>
+
         <Link to={`product/${productData && productData.slug}`}>
           <button className="bg-primeColor text-white text-lg font-bodyFont w-[185px] h-[50px] hover:bg-black duration-300 font-bold">
             Acheter

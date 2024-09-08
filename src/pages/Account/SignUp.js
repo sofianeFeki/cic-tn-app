@@ -1,63 +1,62 @@
-import React, { useState } from "react";
-import { BsCheckCircleFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
-import { logoLight } from "../../assets/images";
+import React, { useState } from 'react';
+import { BsCheckCircleFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
   // ============= Initial State Start here =============
-  const [clientName, setClientName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [password, setPassword] = useState("");
-  const [address, setAddress] = useState("");
-  const [city, setCity] = useState("");
-  const [country, setCountry] = useState("");
-  const [zip, setZip] = useState("");
+  const [clientName, setClientName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [password, setPassword] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [country, setCountry] = useState('');
+  const [zip, setZip] = useState('');
   const [checked, setChecked] = useState(false);
   // ============= Initial State End here ===============
   // ============= Error Msg Start here =================
-  const [errClientName, setErrClientName] = useState("");
-  const [errEmail, setErrEmail] = useState("");
-  const [errPhone, setErrPhone] = useState("");
-  const [errPassword, setErrPassword] = useState("");
-  const [errAddress, setErrAddress] = useState("");
-  const [errCity, setErrCity] = useState("");
-  const [errCountry, setErrCountry] = useState("");
-  const [errZip, setErrZip] = useState("");
+  const [errClientName, setErrClientName] = useState('');
+  const [errEmail, setErrEmail] = useState('');
+  const [errPhone, setErrPhone] = useState('');
+  const [errPassword, setErrPassword] = useState('');
+  const [errAddress, setErrAddress] = useState('');
+  const [errCity, setErrCity] = useState('');
+  const [errCountry, setErrCountry] = useState('');
+  const [errZip, setErrZip] = useState('');
   // ============= Error Msg End here ===================
-  const [successMsg, setSuccessMsg] = useState("");
+  const [successMsg, setSuccessMsg] = useState('');
   // ============= Event Handler Start here =============
   const handleName = (e) => {
     setClientName(e.target.value);
-    setErrClientName("");
+    setErrClientName('');
   };
   const handleEmail = (e) => {
     setEmail(e.target.value);
-    setErrEmail("");
+    setErrEmail('');
   };
   const handlePhone = (e) => {
     setPhone(e.target.value);
-    setErrPhone("");
+    setErrPhone('');
   };
   const handlePassword = (e) => {
     setPassword(e.target.value);
-    setErrPassword("");
+    setErrPassword('');
   };
   const handleAddress = (e) => {
     setAddress(e.target.value);
-    setErrAddress("");
+    setErrAddress('');
   };
   const handleCity = (e) => {
     setCity(e.target.value);
-    setErrCity("");
+    setErrCity('');
   };
   const handleCountry = (e) => {
     setCountry(e.target.value);
-    setErrCountry("");
+    setErrCountry('');
   };
   const handleZip = (e) => {
     setZip(e.target.value);
-    setErrZip("");
+    setErrZip('');
   };
   // ============= Event Handler End here ===============
   // ================= Email Validation start here =============
@@ -72,36 +71,36 @@ const SignUp = () => {
     e.preventDefault();
     if (checked) {
       if (!clientName) {
-        setErrClientName("Enter your name");
+        setErrClientName('Enter your name');
       }
       if (!email) {
-        setErrEmail("Enter your email");
+        setErrEmail('Enter your email');
       } else {
         if (!EmailValidation(email)) {
-          setErrEmail("Enter a Valid email");
+          setErrEmail('Enter a Valid email');
         }
       }
       if (!phone) {
-        setErrPhone("Enter your phone number");
+        setErrPhone('Enter your phone number');
       }
       if (!password) {
-        setErrPassword("Create a password");
+        setErrPassword('Create a password');
       } else {
         if (password.length < 6) {
-          setErrPassword("Passwords must be at least 6 characters");
+          setErrPassword('Passwords must be at least 6 characters');
         }
       }
       if (!address) {
-        setErrAddress("Enter your address");
+        setErrAddress('Enter your address');
       }
       if (!city) {
-        setErrCity("Enter your city name");
+        setErrCity('Enter your city name');
       }
       if (!country) {
-        setErrCountry("Enter the country you are residing");
+        setErrCountry('Enter the country you are residing');
       }
       if (!zip) {
-        setErrZip("Enter the zip code of your area");
+        setErrZip('Enter the zip code of your area');
       }
       // ============== Getting the value ==============
       if (
@@ -118,14 +117,14 @@ const SignUp = () => {
         setSuccessMsg(
           `Hello dear ${clientName}, Welcome you to OREBI Admin panel. We received your Sign up request. We are processing to validate your access. Till then stay connected and additional assistance will be sent to you by your mail at ${email}`
         );
-        setClientName("");
-        setEmail("");
-        setPhone("");
-        setPassword("");
-        setAddress("");
-        setCity("");
-        setCountry("");
-        setZip("");
+        setClientName('');
+        setEmail('');
+        setPhone('');
+        setPassword('');
+        setAddress('');
+        setCity('');
+        setCountry('');
+        setZip('');
       }
     }
   };
@@ -133,9 +132,7 @@ const SignUp = () => {
     <div className="w-full h-screen flex items-center justify-start">
       <div className="w-1/2 hidden lgl:inline-flex h-full text-white">
         <div className="w-[450px] h-full bg-primeColor px-10 flex flex-col gap-6 justify-center">
-          <Link to="/">
-            <img src={logoLight} alt="logoImg" className="w-28" />
-          </Link>
+          <Link to="/"></Link>
           <div className="flex flex-col gap-1 -mt-1">
             <h1 className="font-titleFont text-xl font-medium">
               Get started for free
@@ -379,8 +376,8 @@ const SignUp = () => {
                     type="checkbox"
                   />
                   <p className="text-sm text-primeColor">
-                    I agree to the OREBI{" "}
-                    <span className="text-blue-500">Terms of Service </span>and{" "}
+                    I agree to the OREBI{' '}
+                    <span className="text-blue-500">Terms of Service </span>and{' '}
                     <span className="text-blue-500">Privacy Policy</span>.
                   </p>
                 </div>
@@ -388,14 +385,14 @@ const SignUp = () => {
                   onClick={handleSignUp}
                   className={`${
                     checked
-                      ? "bg-primeColor hover:bg-black hover:text-white cursor-pointer"
-                      : "bg-gray-500 hover:bg-gray-500 hover:text-gray-200 cursor-none"
+                      ? 'bg-primeColor hover:bg-black hover:text-white cursor-pointer'
+                      : 'bg-gray-500 hover:bg-gray-500 hover:text-gray-200 cursor-none'
                   } w-full text-gray-200 text-base font-medium h-10 rounded-md hover:text-white duration-300`}
                 >
                   Create Account
                 </button>
                 <p className="text-sm text-center font-titleFont font-medium">
-                  Don't have an Account?{" "}
+                  Don't have an Account?{' '}
                   <Link to="/signin">
                     <span className="hover:text-blue-600 duration-300">
                       Sign in

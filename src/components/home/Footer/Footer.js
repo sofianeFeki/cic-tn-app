@@ -133,15 +133,16 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="col-span-2 flex flex-col items-center w-full px-4">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.214687049167!2d10.181641100000002!3d36.8133751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd3463338b5493%3A0xa78dc0b154a7c664!2z2LTYsdmD2Kkg2KfZhNit2KjYsSDZhNmE2YXZg9in2KrYqA!5e0!3m2!1sen!2stn!4v1716806537177!5m2!1sen!2stn"
-            width="400"
-            height="270"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div className="col-span-2 flex flex-col items-center w-full h-full ">
+          <div className="w-full h-0 pb-[56.25%] relative">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.214687049167!2d10.181641100000002!3d36.8133751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd3463338b5493%3A0xa78dc0b154a7c664!2z2LTYsdmD2Kkg2KfZhNit2KjYsSDZhNmE2YXZg9in2KrYqA!5e0!3m2!1sen!2stn!4v1716806537177!5m2!1sen!2stn"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>

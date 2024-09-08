@@ -24,8 +24,13 @@ const CustomSlide = ({ image, openModal, user }) => (
         className="flex z-1 bg-white bg-opacity-90 text-black p-2 rounded cursor-pointer shadow-testShadow absolute bottom-2 right-2 hover:bg-opacity-100"
         onClick={openModal}
       >
-        <CameraIcon className="block h-6 w-6 mr-1" aria-hidden="true" />
-        <span className="font-bold">Ajouter une photo</span>
+        <CameraIcon
+          className="block h-4 w-4 mr-1 md:h-6 md:w-6 "
+          aria-hidden="true"
+        />
+        <span className="font-bold text-xs md:text-base">
+          Ajouter une photo
+        </span>
       </button>
     )}
   </div>
@@ -206,6 +211,7 @@ const Banner = () => {
         settings: {
           dots: true,
           adaptiveHeight: true,
+          arrows: false,
           customHeight: '36rem', // Height for mobile screens
         },
       },
@@ -213,8 +219,8 @@ const Banner = () => {
   };
 
   return (
-    <div className="w-full flex justify-center px-4">
-      <div className="w-full h-76 max-w-screen-2xl z-1 mx-6 shadow-testShadow rounded-lg">
+    <div className="w-full flex justify-center md:px-4">
+      <div className="w-full  max-w-screen-2xl z-1 mx-6 shadow-testShadow rounded-lg">
         <Slider {...settings}>
           {images.map((slide, index) => (
             <CustomSlide

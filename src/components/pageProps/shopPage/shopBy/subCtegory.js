@@ -48,6 +48,7 @@ const SubCategory = () => {
   useEffect(() => {
     loadCategories();
     loadSubs();
+    console.log(sub, 'i m the subs');
   }, []);
   const loadCategories = () => {
     getCategories().then((c) => setCategories(c.data));
@@ -86,8 +87,10 @@ const SubCategory = () => {
   };
 
   const filteredSubs = category
-    ? subs.filter((sub) => sub.parent.name === category)
-    : subs.filter((sub) => checkedCategories.includes(sub.parent.name));
+    ? subs.filter((sub) => sub.parent && sub.parent.name === category)
+    : subs.filter(
+        (sub) => sub.parent && checkedCategories.includes(sub.parent.name)
+      );
 
   return (
     <div className="w-full p-4 bg-[#F5F5F3] rounded-lg drop-shadow-xl">

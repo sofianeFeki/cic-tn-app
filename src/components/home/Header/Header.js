@@ -27,12 +27,12 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="w-full h-20 bg-white relative top-0  border-b-[1px] border-b-gray-200 shadow-md z-20 ">
+    <div className="w-full h-14 md:h-20 bg-white relative top-0  border-b-[1px] border-b-gray-200 shadow-md z-30 ">
       <nav className="h-full px-4 max-w-container mx-auto relative ">
         <Flex className="flex items-center justify-between h-full">
           <Link to="/">
             <div>
-              <Image className="w-32 object-cover" imgSrc={logo} />
+              <Image className="w-24 md:w-32 object-cover" imgSrc={logo} />
             </div>
           </Link>
           <div>
@@ -59,15 +59,15 @@ const Header = () => {
             )}
             <HiMenuAlt2
               onClick={() => setSidenav(!sidenav)}
-              className="inline-block md:hidden cursor-pointer w-8 h-6 absolute top-6 right-4"
+              className="inline-block md:hidden cursor-pointer w-8 h-6 absolute top-4 right-4"
             />
             {sidenav && (
-              <div className="fixed top-0 left-0 w-full h-screen bg-black text-gray-200 bg-opacity-80 z-10 ">
+              <div className="fixed top-0 left-0 w-full h-screen bg-black text-gray-200 bg-opacity-80  ">
                 <motion.div
                   initial={{ x: -300, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.5 }}
-                  className="w-[80%] h-full relative"
+                  className="w-[80%] h-full relative z-10"
                 >
                   <div className="w-full h-full bg-primeColor p-6">
                     <img className="w-28 mb-6" src={logo} alt="logoLight" />
@@ -92,7 +92,7 @@ const Header = () => {
                         onClick={() => setCategory(!category)}
                         className="flex justify-between text-base cursor-pointer items-center font-titleFont mb-2"
                       >
-                        Shop by Category{' '}
+                        Nos Categories{' '}
                         <span className="text-lg">{category ? '-' : '+'}</span>
                       </h1>
                       {category && (
@@ -102,34 +102,24 @@ const Header = () => {
                           transition={{ duration: 0.4 }}
                           className="text-sm flex flex-col gap-1"
                         >
-                          <li className="headerSedenavLi">New Arrivals</li>
-                          <li className="headerSedenavLi">Gudgets</li>
-                          <li className="headerSedenavLi">Accessories</li>
-                          <li className="headerSedenavLi">Electronics</li>
-                          <li className="headerSedenavLi">Others</li>
-                        </motion.ul>
-                      )}
-                    </div>
-                    <div className="mt-4">
-                      <h1
-                        onClick={() => setBrand(!brand)}
-                        className="flex justify-between text-base cursor-pointer items-center font-titleFont mb-2"
-                      >
-                        Shop by Brand
-                        <span className="text-lg">{brand ? '-' : '+'}</span>
-                      </h1>
-                      {brand && (
-                        <motion.ul
-                          initial={{ y: 15, opacity: 0 }}
-                          animate={{ y: 0, opacity: 1 }}
-                          transition={{ duration: 0.4 }}
-                          className="text-sm flex flex-col gap-1"
-                        >
-                          <li className="headerSedenavLi">New Arrivals</li>
-                          <li className="headerSedenavLi">Gudgets</li>
-                          <li className="headerSedenavLi">Accessories</li>
-                          <li className="headerSedenavLi">Electronics</li>
-                          <li className="headerSedenavLi">Others</li>
+                          <Link
+                            to="/category/Photocopieur"
+                            onClick={() => setSidenav(false)}
+                          >
+                            <li className="headerSedenavLi">Photocopieur</li>
+                          </Link>
+                          <Link
+                            to="/category/Imprimante"
+                            onClick={() => setSidenav(false)}
+                          >
+                            <li className="headerSedenavLi">Imprimante</li>
+                          </Link>
+                          <Link
+                            to="/category/Consommable"
+                            onClick={() => setSidenav(false)}
+                          >
+                            <li className="headerSedenavLi">Consommable</li>
+                          </Link>
                         </motion.ul>
                       )}
                     </div>

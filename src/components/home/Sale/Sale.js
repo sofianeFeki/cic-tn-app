@@ -23,26 +23,29 @@ const Sale = () => {
           <p className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
             Découvrir nos imprimantes
           </p>
-          <div className="flex gap-2 md:gap-4">
-            <img
-              src={pantum1}
-              alt="Imprimante 1"
-              className="w-24 md:w-1/3 max-h-[156px] h-full object-cover cursor-pointer shadow-md transform transition duration-300 hover:scale-105"
-            />
-            <img
-              src={pantum2}
-              alt="Imprimante 2"
-              className="w-24 md:w-1/3 max-h-[170px] h-full object-cover cursor-pointer shadow-md transform transition duration-300 hover:scale-105"
-            />
-            <img
-              src={pantum3}
-              alt="Imprimante 3"
-              className="w-24 md:w-1/3 max-h-[170px] h-full object-cover cursor-pointer shadow-md transform transition duration-300 hover:scale-105"
-            />
-          </div>
+          <Link to="category/Imprimante">
+            <div className="flex gap-2 md:gap-4">
+              <img
+                src={pantum1}
+                alt="Imprimante 1"
+                className="w-24 md:w-1/3 max-h-[156px] h-full object-cover cursor-pointer shadow-md transform transition duration-300 hover:scale-105"
+              />
+              <img
+                src={pantum2}
+                alt="Imprimante 2"
+                className="w-24 md:w-1/3 max-h-[170px] h-full object-cover cursor-pointer shadow-md transform transition duration-300 hover:scale-105"
+              />
+              <img
+                src={pantum3}
+                alt="Imprimante 3"
+                className="w-24 md:w-1/3 max-h-[170px] h-full object-cover cursor-pointer shadow-md transform transition duration-300 hover:scale-105"
+              />
+            </div>
+          </Link>
+
           <Link
             to="category/Imprimante"
-            className="text-blue-500 hover:underline block  mt-2 md:mt-4"
+            className="text-blue-500 hover:underline block font-bold  mt-2 md:mt-4"
           >
             Découvrir plus
           </Link>
@@ -53,26 +56,30 @@ const Sale = () => {
           <p className="text-xl md:text-2xl font-semibold mb-2 md:mb-4">
             Découvrir nos Photocopieur
           </p>
-          <div className="flex gap-2 md:gap-4">
-            <img
-              src={ricoh1}
-              alt="Photocopieur 1"
-              className="w-24 md:w-1/3 max-h-[156px] h-full object-cover cursor-pointer shadow-md transform transition duration-300 hover:scale-105"
-            />
-            <img
-              src={ricoh2}
-              alt="Photocopieur 2"
-              className="w-24 md:w-1/3 max-h-[156px] h-full object-cover cursor-pointer shadow-md transform transition duration-300 hover:scale-105"
-            />
-            <img
-              src={ricoh3}
-              alt="Photocopieur 3"
-              className="w-24 md:w-1/3 max-h-[156px] h-full object-cover cursor-pointer shadow-md transform transition duration-300 hover:scale-105"
-            />
-          </div>
+          <Link to="category/Photocopieur">
+            <div className="flex gap-2 md:gap-4">
+              <img
+                src={ricoh1}
+                alt="Photocopieur 1"
+                className="w-24 md:w-1/3 max-h-[156px] h-full object-cover cursor-pointer shadow-md transform transition duration-300 hover:scale-105"
+              />
+              <img
+                src={ricoh2}
+                alt="Photocopieur 2"
+                className="w-24 md:w-1/3 max-h-[156px] h-full object-cover cursor-pointer shadow-md transform transition duration-300 hover:scale-105"
+              />
+
+              <img
+                src={ricoh3}
+                alt="Photocopieur 3"
+                className="w-24 md:w-1/3 max-h-[156px] h-full object-cover cursor-pointer shadow-md transform transition duration-300 hover:scale-105"
+              />
+            </div>
+          </Link>
+
           <Link
             to="category/Photocopieur"
-            className="text-blue-500 hover:underline block mt-2 md:mt-4"
+            className="text-blue-500 hover:underline font-bold block mt-2 md:mt-4"
           >
             Découvrir plus
           </Link>
@@ -85,15 +92,17 @@ const Sale = () => {
           Découvrir nos consommables
         </p>
         <div className="flex-grow flex items-center justify-center">
-          <img
-            src={consommable}
-            alt="Consommable"
-            className="object-cover max-h-[520px] w-[560px] shadow-md transform transition duration-300 hover:scale-105"
-          />
+          <Link to="category/Consommable">
+            <img
+              src={consommable}
+              alt="Consommable"
+              className="object-cover max-h-[520px] w-[560px] shadow-md transform transition duration-300 hover:scale-105"
+            />
+          </Link>
         </div>
         <Link
           to="category/Consommable"
-          className="text-blue-500 hover:underline block mb-2"
+          className="text-blue-500 hover:underline font-bold block mb-2"
         >
           Découvrir plus
         </Link>

@@ -53,18 +53,18 @@ const Pagination = ({
           <div className="flex flex-col mdl:flex-row justify-center mdl:justify-between items-center mt-6">
             <ReactPaginate
               breakLabel="..."
-              nextLabel="next >"
+              nextLabel=" > "
               onPageChange={handlePageClick}
-              pageRangeDisplayed={5}
+              pageRangeDisplayed={1}
               pageCount={totalPages}
-              previousLabel="< previous"
+              previousLabel=" < "
               renderOnZeroPageCount={null}
               containerClassName={` flex justify-center`}
-              pageClassName="mx-1 px-3 py-2 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-100"
+              pageClassName="mx-1 h-7 w-7 text-sm px-1 py-1 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-100 flex items-center justify-center"
               activeClassName="bg-primeColor text-white"
-              previousClassName="mx-1 px-3 py-2 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-100"
-              nextClassName="mx-1 px-3 py-2 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-100"
-              breakClassName="mx-1 px-3 py-2 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-100"
+              previousClassName=" text-sm px-1 py-1 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-100"
+              nextClassName=" text-sm px-1 py-1 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-100"
+              breakClassName=" text-sm h-7 w-7 px-1 py-1 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-100 flex items-center justify-center"
               disabledClassName="text-gray-400 cursor-not-allowed"
             />
             <p className="text-base font-normal text-lightText">

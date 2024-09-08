@@ -40,19 +40,19 @@ const transitionStyles = {
 
 // Define reusable button styles
 const buttonBaseStyles =
-  'flex items-center p-2  h-[36px] rounded-l-md shadow-md hover:shadow-xl transform transition duration-300  lg:h-[50px] lg:mt-0';
+  'flex items-center p-1 md:p-2 h-[32px] md:h-[36px] rounded-l-md shadow-md hover:shadow-xl transform transition duration-300  lg:h-[50px] lg:mt-0';
 const userMenuButtonStyles = `
-  relative 
-  bg-white 
-  border border-gray-300 
-  hover:bg-gray-50 
+  relative
+  bg-white
+  border border-gray-300
+  hover:bg-gray-50
   hover:color-black
   hover:shadow-xl
-  transform 
-  transition duration-300 
-  focus:ring-4 focus:outline-none focus:ring-gray-300 
-  rounded-full 
-  shadow-md 
+  transform
+  transition duration-300
+  focus:ring-4 focus:outline-none focus:ring-gray-300
+  rounded-full
+  shadow-md
   p-1.5
 `;
 function debounce(func, delay) {
@@ -164,30 +164,25 @@ const HeaderBottom = () => {
   };
 
   return (
-    <div className="w-full px-2 bg-[#F5F5F3] z-10 drop-shadow-xl sticky top-0 transition-all duration-300 ease-in-out  hover:shadow-2xl">
+    <div className="w-full px-2 bg-[#F5F5F3] z-20 drop-shadow-xl sticky top-0 transition-all duration-300 ease-in-out  hover:shadow-2xl">
       <div className="max-w-container mx-auto">
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full  pb-4 lg:pb-0 h-full lg:h-24">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full  pb-2 lg:pb-0 h-full lg:h-24">
           {/* Mobile & Desktop: Browse all collection button */}
-          <div className="flex justify-between">
-            <div className="flex items-center justify-space-between lg:justify-start ">
-              <Link to="/" className={`${userMenuButtonStyles} mr-3`}>
-                <HomeIcon
-                  className="block h-6 w-6 text-yellow-500"
+          <div className="flex items-center justify-space-between lg:justify-start ">
+            <Link to="/shop">
+              <button
+                className="flex items-center  mr-[calc(42px-100%)] md:mr-0  border border-gray-300
+ mt-1 md:mt-2 p-2 h-[36px] rounded-md shadow-md hover:shadow-xl transform transition duration-300 bg-white  lg:h-[50px] lg:mt-0"
+              >
+                <Squares2X2Icon
+                  className="block h-4 w-4 md:h-6 md:w-6 mr-1 text-yellow-500"
                   aria-hidden="true"
                 />
-              </Link>
-              <Link to="/shop">
-                <button className="flex items-center p-2  h-[36px] rounded-md shadow-md hover:shadow-xl transform transition duration-300 bg-white  lg:h-[50px] lg:mt-0">
-                  <Squares2X2Icon
-                    className="block h-6 w-6 mr-1 text-yellow-500"
-                    aria-hidden="true"
-                  />
-                  <span className="font-bold whitespace-nowrap p-0.5 text-sm md:text-base">
-                    Nos produits{' '}
-                  </span>
-                </button>
-              </Link>
-            </div>
+                <span className="font-bold whitespace-nowrap p-0.5 text-xs md:text-base">
+                  Nos produits{' '}
+                </span>
+              </button>
+            </Link>
 
             {/* Mobile: Heart, Shopping Cart, User Profile Buttons */}
             <div className="flex lg:hidden gap-1 mt-2  pl-2">
@@ -231,36 +226,42 @@ const HeaderBottom = () => {
                   </Transition>
                 </Menu>
               ) : (
-                <Link
-                  to="/signin"
-                  className="flex items-center border border-gray-200   focus:ring-4 focus:outline-none focus:ring-gray-300 bg-white text-black p-1 shadow-md rounded-xl hover:shadow-xl transform transition duration-300"
-                >
-                  <UserIcon className="block h-6 w-6 text-yellow-500" />{' '}
-                  <span className="font-bold p-0.5 text-sm md:text-base">
-                    Connexion
-                  </span>
+                <Link to="/signin">
+                  <button
+                    className="flex items-center p-1  border border-gray-300
+   md:mt-2 h-[36px] rounded-md shadow-md hover:shadow-xl transform transition duration-300 bg-white  lg:h-[50px] "
+                  >
+                    <UserIcon
+                      className="block h-4 w-4 md:h-6 md:w-6 mr-1 text-yellow-500"
+                      aria-hidden="true"
+                    />
+                    <span className="font-bold whitespace-nowrap p-0 md:p-0.5 text-xs md:text-base">
+                      Connexion
+                    </span>
+                  </button>
                 </Link>
               )}
             </div>
           </div>
 
           {/* Desktop: Search Input */}
-          <div className="relative mt-2 md:mt-0 w-full lg:w-[600px] h-[36px] lg:h-[50px] text-base text-primeColor border-t border-r border-b border-gray-300 bg-white flex items-center rounded-xl drop-shadow-xl gap-1">
+          <div className="relative mt-1 md:mt-0 w-full lg:w-[600px] h-[32px] md:h-[36px] lg:h-[50px] text-base text-primeColor border-t border-r border-b border-gray-300 bg-white flex items-center rounded-xl drop-shadow-xl gap-1">
             <Menu as="div" className="relative">
               <MenuButton
                 className={`${buttonBaseStyles} bg-yellow-500 text-white `}
               >
                 <ViewColumnsIcon
-                  className="block h-6 w-6 mr-1"
+                  className="block h-4 w-4 md:h-6 md:w-6 mr-1"
                   aria-hidden="true"
                 />
-                <span className="font-bold whitespace-nowrap  text-sm md:text-base">
-                  Nos categories
+                <span className="font-bold whitespace-nowrap  text-xs md:text-base">
+                  <span className="hidden md:inline">Nos </span>
+                  categories
                 </span>
                 <ChevronDownIcon className=" mt-1 ml-1 block h-4 w-4 " />
               </MenuButton>
               <Transition {...transitionStyles}>
-                <MenuItems className="absolute left-0 z-10 mt-2 w-48 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <MenuItems className="absolute left-0 z-10 mt-2 w-48  origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                   {['Imprimante', 'Consommable', 'Photocopieur'].map(
                     (category, index) => (
                       <MenuItem key={index}>
@@ -293,7 +294,7 @@ const HeaderBottom = () => {
               <input
                 id="search"
                 name="search"
-                className=" border-l border-gray-400 bg-white rounded-lg focus:outline-none z-10 w-full h-[36px] "
+                className="border-l border-gray-400 bg-white rounded-lg focus:outline-none z-10 w-full h-[30px] md:h-[36px] text-xs md:text-base placeholder:text-sm md:placeholder:text-base"
                 placeholder="Recherche un produit"
                 type="search"
                 style={{ borderLeft: 'none' }}
@@ -304,7 +305,7 @@ const HeaderBottom = () => {
               {showSearchBar && query && (
                 <div
                   ref={dropdownRef}
-                  className="w-full mx-auto h-auto max-h-96 bg-white top-16 absolute left-0 z-10 overflow-y-scroll rounded-xl shadow-md cursor-pointer"
+                  className="w-full mx-auto h-auto max-h-96 bg-white top-9 md:top-14 absolute left-0 z-10 overflow-y-scroll rounded-xl shadow-md cursor-pointer"
                 >
                   {loading ? (
                     <div className="text-center">
@@ -380,10 +381,10 @@ const HeaderBottom = () => {
               onClick={() => {
                 navigate(`/search?query=${query}`);
               }}
-              className={`bg-yellow-500 shadow-md hover:shadow-xl text-white flex items-center justify-center px-4 lg:px-6 h-[36px] lg:h-[50px] rounded-r-md`}
+              className={`bg-yellow-500 shadow-md hover:shadow-xl text-white flex items-center justify-center px-2 md:px-4 lg:px-6 h-[32px] md:h-[36px] lg:h-[50px] rounded-r-md`}
             >
               <MagnifyingGlassIcon
-                className="block h-6 w-6 "
+                className="block h-4 w-4 md:h-6 md:w-6 "
                 aria-hidden="true"
               />
             </button>
@@ -407,24 +408,26 @@ const HeaderBottom = () => {
               <Menu as="div" className="relative">
                 <div className="relative inline-flex items-center">
                   <MenuButton
-                    className="relative 
-            bg-white 
-            border border-gray-300 
-            hover:bg-gray-50 
+                    className="relative
+            bg-white
+            border border-gray-300
+            hover:bg-gray-50
             hover:text-black
             hover:shadow-xl
-            transform 
-            transition duration-300 
-            focus:ring-4 focus:outline-none focus:ring-gray-300 
-            rounded-full 
-            shadow-md 
-            p-1.5"
+            transform
+            transition duration-300
+            focus:ring-4 focus:outline-none focus:ring-gray-300
+            rounded-full
+            shadow-md
+            p-1.5
+            mt-2
+            "
                   >
                     <span className="sr-only">Open user menu</span>
                     <UserIcon className="block h-6 w-6 text-gray-600" />
                   </MenuButton>
                   {/* Online status indicator */}
-                  <span className="absolute top-8 right-1 block h-4 w-4 transform translate-x-1/2 -translate-y-1/2 rounded-full bg-green-500 border-2 border-white" />
+                  <span className="absolute top-10 right-1 block h-4 w-4 transform translate-x-1/2 -translate-y-1/2 rounded-full bg-green-500 border-2 border-white" />
                 </div>
                 <span className="text-gray-800 font-bold text-sm  m-2 ">
                   {user.email}
@@ -453,10 +456,12 @@ const HeaderBottom = () => {
             ) : (
               <Link
                 to="/signin"
-                className="flex bg-white text-black p-1 rounded-lg hover:shadow-xl transform transition duration-300"
+                className="flex  bg-white text-black p-1 rounded-lg hover:shadow-xl transform transition duration-300"
               >
-                <UserIcon className="block h-6 w-6 text-yellow-500" />{' '}
-                <span className="font-bold p-0.5">Connexion</span>
+                <UserIcon className="block h-6 w-6  text-yellow-500" />{' '}
+                <span className="font-bold md:p-0.5 text-sm md:text-base">
+                  Connexion
+                </span>
               </Link>
             )}
           </div>

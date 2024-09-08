@@ -31,7 +31,6 @@ const LazyAbout = lazy(() => import('./pages/About/About'));
 const LazyContact = lazy(() => import('./pages/Contact/Contact'));
 const LazyJournal = lazy(() => import('./pages/Journal/Journal'));
 const LazyOffer = lazy(() => import('./pages/Offer/Offer'));
-const LazySubCat = lazy(() => import('./pages/subCat/SubCat'));
 const LazyPayment = lazy(() => import('./pages/payment/Payment'));
 const LazyProductDetails = lazy(() =>
   import('./pages/ProductDetails/ProductDetails')
@@ -109,7 +108,6 @@ const router = createBrowserRouter(
         <Route path="/contact" element={<LazyContact />} />
         <Route path="/journal" element={<LazyJournal />} />
         <Route path="/category/:category" element={<LazyOffer />} />
-        <Route path="/category/:subCat" element={<LazySubCat />} />
         <Route path="/product/:slug" element={<LazyProductDetails />} />
         <Route path="/admin/product/create" element={<LazyProductCreate />} />
         <Route
